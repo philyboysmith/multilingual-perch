@@ -1,0 +1,16 @@
+<perch:before>
+    <ul>
+</perch:before>
+		<li<perch:if exists="current_page"> class="selected"</perch:if><perch:if exists="ancestor_page"> class="ancestor"</perch:if>>
+            <a href="<perch:pages id="pagePath" />">
+            <perch:if id="lang" value="it">
+	            <perch:pages id="pageNavText-it" />
+			<perch:else />
+			    <perch:pages id="pageNavText" />
+			</perch:if>
+			</a>   
+            <perch:pages id="subitems" encode="false" />
+        </li>
+<perch:after>
+    </ul>
+</perch:after>
